@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+background-image: url("./Media/pexels-pixabay-163143.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+#linkscontainer{
+height: 100vh;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#links {
+height: 80vh;
+width: 30vh;
+display: flex;
+flex-wrap: wrap;
+align-content: space-around;
+}
+
+a {
+font-size: 45px;
+text-decoration: none;
+transition: 0.5s;
+}
+
+a:visited {
+color:whitesmoke;
+}
+
+a:hover {
+padding-left: 20px;
+}
+
+
+  
+
+
+

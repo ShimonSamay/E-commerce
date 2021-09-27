@@ -1,0 +1,48 @@
+
+body {
+background-color: white;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div {
+display: flex;
+justify-content: center;
+height: 500px;
+align-items: center ;
+}
+
+td, th,  table {
+text-align: center;
+padding: 20px;
+border-collapse: collapse;
+color: black;
+font-weight: bold;
+}  
+
+thead tr {
+background-color: rgba(220, 20, 60, 0.829);
+}
+
+th {
+color: whitesmoke;
+}
+
+table {
+border-radius: 5px 5px;
+overflow: hidden;
+}
+
+tr {
+border-bottom: 2px solid rgba(220, 20, 60, 0.829) ;
+}
+
+.remBtns{
+background-color: rgba(220, 20, 60, 0.829);
+padding: 10px;
+border-radius: 5px;
+color: whitesmoke;
+cursor: pointer;
+border: transparent;
+}
+
+
