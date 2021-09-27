@@ -86,18 +86,17 @@ animation: slide 20s infinite ease-in-out;
 #slidercon{
 display: flex;
 justify-content: center;
-height: 39vh;
-width: 98vw;
+height: 31vh;
+width: 100vw;
 }
 #slider{
-width: 97vw;
+width: 99vw;
 margin-top: 1%;
 background-image: url("../Media/headphonebg1.webp");
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 animation: slide 20s infinite ease-in-out;
-margin-left: 2%;
 }
 @keyframes slide {
 0%{background-image: url("../Media/headphonebg1.webp");}
