@@ -27,14 +27,23 @@ userCart = [
 
 
 var userTable = document.getElementById("table");
+function printProducts () {
 var sum = 0;
+userTable.innerHTML += 
+`<thead>
+<tr>
+  <th>Product</th>
+  <th>Price</th>
+  <th>Remove</th>
+</tr>
+</thead>`
 for (var i = 0; i < userCart.length; i++) {
  sum+=userCart[i].price
  userTable.innerHTML += 
 `<tr id="item${i}" class="price">
      <td>${userCart[i].Name}</td>
      <td class="price">${userCart[i].price}$</td>
-     <td><button id="item${i}btn" class="remBtns">Remove</button></td>
+     <td><button id="item${i}btn" class="remBtns" onclick="removeFromCart(findID(${userCart[i].ID}))">Remove</button></td>
 </tr>`;
 }
 userTable.innerHTML+=
@@ -42,28 +51,20 @@ userTable.innerHTML+=
      <td> For payment :</td>
      <td id="sum">${sum}$</td>
 <tr>`
+}
+printProducts();
 
-var item0 = document.getElementById("item0");
-var item0Btn = document.getElementById("item0btn");
-item0Btn.addEventListener("click", () => {
-  item0.style.display = "none";
-  sum-=userCart[0].price ;
-  document.getElementById("sum").innerHTML=`${sum}$` ;
-  
-});
+function findID (id) {
+  for ( var i = 0; i<userCart.length; i++){
+    if (id == userCart[i].ID) {
+      return i;
+    }
+  }
+};
 
-var item1 = document.getElementById("item1");
-var item1Btn = document.getElementById("item1btn");
-item1Btn.addEventListener("click", () => {
-  item1.style.display = "none";
-  sum-=userCart[1].price ;
-  document.getElementById("sum").innerHTML=`${sum}$`
-});
+function removeFromCart (index) {
+userCart.splice(index , 1)
+userTable.innerHTML = ``;
+printProducts();
+}
 
-var item2 = document.getElementById("item2");
-var item2Btn = document.getElementById("item2btn");
-item2Btn.addEventListener("click", () => {
-  item2.style.display = "none";
-  sum-=userCart[2].price ;
-  document.getElementById("sum").innerHTML=`${sum}$` ;
-});
